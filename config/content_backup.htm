@@ -36,9 +36,48 @@
 <p><a href="https://nfuedu-my.sharepoint.com/:t:/g/personal/41123144_nfu_edu_tw/ER-PHEuBhbtGtGzvOeTaX4sBtfwtyTDjnqBsS6UJ1Eb9Xg?e=xodrck">如何在 replit 自設 ssh 維護分組倉儲.txt</a></p>
 <p></p>
 <p><span>心得:如果同組人員同時使用 Replit 與 codespaces 維護</span><span>網站,可能會造成雙方版本不一</span></p>
-<h1><span>W10</span></h1>
-<p><span>任務一</span></p>
-<h1>Replit</h1>
+<h1>W10</h1>
+<h2>任務一</h2>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 開啟 2a.txt 檔案並讀取資料
+with open('2a.txt', 'r') as file:
+    lines = file.readlines()  # 讀取每一行資料
+
+# 將每一行資料逐一放入數列
+student_data = []
+for line in lines:
+    student_data.append(line.strip().split())
+
+# 輸出學生資料
+for data in student_data:
+    student_id, github_account, group = data
+    print("學號:", student_id)
+    print("Github帳號:", github_account)
+    print("組別:", group)
+    print()
+
+    # 建立學員倉儲連結
+    student_repo_link = f"https://github.com/{github_account}/cd2024"
+    print("學員倉儲連結:", student_repo_link)
+
+    # 建立學員網站連結
+    student_website_link = f"https://{github_account}.github.io/cd2024"
+    print("學員網站連結:", student_website_link)
+
+    # 建立 2a 分組倉儲連結
+    group_repo_link = f"https://github.com/mdecd2024/2a-{group}"
+    print("2a 分組倉儲連結:", group_repo_link)
+
+    print()
+</pre>
+<form><label>Filename:<span> </span><input id="kw_filename" placeholder="input file name" type="text"/>.py</label><span> </span><input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
+<p></p>
+<p></p>
+<p></p>
+<p><button id="kw_run1">Run</button><span> </span><button id="kw_show_console1">Output</button><span> </span><button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<p></p>
+<p></p>
+<p></p>
+<div></div><h1>Replit</h1>
 <p><a href="https://replit.com">https://replit.com</a></p>
 <p>利用 init_replit 指令安裝所需 Python 模組<br/><br/>chmod u+x init_replit<br/><br/>./init_replit</p>
 <p dir="auto">On Replit:</p>
